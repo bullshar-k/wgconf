@@ -239,7 +239,7 @@ func cmdAdd(args []string) {
 		fmt.Fprintf(os.Stderr, "Error reading server config file: %v\n", err)
 		os.Exit(1)
 	}
-	newServerContent := strings.TrimRight(string(serverContent), "\n") + strings.Join(peerBlocks, "") + "\n"
+	newServerContent := strings.TrimRight(string(serverContent), "\n") + "\n" + strings.Join(peerBlocks, "") + "\n"
 	if err := os.WriteFile(serverPath, []byte(newServerContent), 0600); err != nil {
 		fmt.Fprintf(os.Stderr, "Error writing server config: %v\n", err)
 		os.Exit(1)
