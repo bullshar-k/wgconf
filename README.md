@@ -12,7 +12,7 @@ cd wgconf
 go build main.go
 ./main
 ```
-The help pages will show you the use flags but they below anyways
+The help pages will show you the use flags but they're below anyways
 
 ### ./main generate new
 #### Basic example
@@ -26,8 +26,7 @@ Preshared key is on by default but can be disabled with the flag.
 
 ### ./main generate add
 To use the add command you use it as the previous command but define the previous server.conf file at the end. All this does different is add new peers. 
-If you generate new with conditions A, B, and C. Then you generate add with conditions A and B it will adhere to that. I
-f you want the exact same settings for new peers you must define that.
+If you generate new with conditions A, B, and C. Then you generate add with conditions A and B it will adhere to that. If you want the exact same settings for new peers you must define that.
 
 ## Help outputs
 ./main
@@ -79,5 +78,5 @@ Usage of new:
   -timeout int
     	Persistent keepalive in seconds (0 to disable)
 ```
-*Final note*
+*Final note*:
 I wrote this only for myself, web alternatives exist, I'm sure there's an electron app for this, etc. I wanted a fast one command wireguard config generator with minimal defaults and the ability to add new peers to an existing config. It's simply and slapping numbers and keys where they need to go so I used AI to write it. This is only on github in case other people find it useful or were wanting the same thing.
