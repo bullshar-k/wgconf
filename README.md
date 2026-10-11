@@ -10,26 +10,26 @@ This was entirely written by AI. All it does it generate wireguard keys and auto
 git clone https://github.com/bullshar-k/wgconf
 cd wgconf
 go build
-./wgconf
+./wgconfig
 ```
 The help pages will show you the use flags but they're below anyways
 
-### ./wgconf generate new
+### ./wgconfig generate new
 #### Basic example
 ```
-./wgconf generate new -dest 192.168.1.1 -peer 3
+./wgconfig generate new -dest 192.168.1.1 -peer 3
 ```
 
 This will create a server config and 3 peer configs. The server will have address 192.168.1.1/24.
 The peers will increment by 1 on the last octet. 
 Preshared key is on by default but can be disabled with the flag.
 
-### ./wgconf generate add
+### ./wgconfig generate add
 To use the add command you use it as the previous command but define the previous server.conf file at the end. All this does different is add new peers. 
 If you generate new with conditions A, B, and C. Then you generate add with conditions A and B it will adhere to that. If you want the exact same settings for new peers you must define that.
 
 ## Help outputs
-./wgconf
+./wgconfig
 ```
 Usage:
   wgconfig generate new [flags]        Create new WireGuard configs
@@ -38,7 +38,7 @@ Usage:
   wgconfig -h                          Show this help
   wgconfig generate -h                 Show generate command help
 ```
-./wgconf generate
+./wgconfig generate
 ```
 Usage:
 
@@ -59,7 +59,7 @@ Flags:
   -P            Generate preshared keys, use -P=false to disable (default true)
   -h            Show this help
 ```
-./wgconf generate new && ./wgconf generate add
+./wgconfig generate new && ./wgconfig generate add
 ```
 Usage of new:
   -P	Generate preshared keys (-P=true/false) (default true)
